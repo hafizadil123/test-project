@@ -1,0 +1,54 @@
+{
+  "name": "websockets-service",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "env NODE_ENV=prod node dist",
+    "prebuild": "rimraf dist",
+    "build": "tsc",
+    "dev": "NODE_ENV=dev ts-node-dev src",
+    "dev-windows": "env NODE_ENV=dev ts-node-dev src",
+    "test": "jest"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
+  "dependencies": {
+    "@hapi/boom": "^7.4.2",
+    "@types/axios": "^0.14.0",
+    "@types/config": "^0.0.34",
+    "@types/morgan": "^1.7.36",
+    "@types/socket.io": "^2.1.2",
+    "@types/socketio-jwt": "^0.0.0",
+    "axios": "^0.19.0",
+    "config": "^3.1.0",
+    "dotenv": "^8.0.0",
+    "express": "^4.17.1",
+    "helmet": "^3.20.0",
+    "js-yaml": "^3.13.1",
+    "mongoose": "^5.6.4",
+    "morgan": "^1.9.1",
+    "prettier": "^1.18.2",
+    "schm": "^0.4.1",
+    "socket.io": "^2.2.0",
+    "socketio-jwt": "^4.5.0",
+    "winston": "^3.2.1"
+  },
+  "devDependencies": {
+    "@types/bull": "^3.10.0",
+    "@types/dotenv": "^6.1.1",
+    "@types/jest": "^24.0.15",
+    "@types/socket.io-client": "^1.4.32",
+    "bull": "^3.10.0",
+    "husky": "^3.0.0",
+    "jest": "^24.8.0",
+    "pretty-quick": "^1.11.1",
+    "socket.io-client": "^2.2.0",
+    "ts-jest": "^24.0.2",
+    "ts-node-dev": "^1.0.0-pre.40",
+    "typescript": "^3.5.3"
+  },
+  "license": "MIT"
+}
